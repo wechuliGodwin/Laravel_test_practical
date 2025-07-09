@@ -12,6 +12,9 @@ Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard'
 Route::get('/create', [UserController::class, 'showCreate'])->name('user.create');
 Route::post('/create', [UserController::class, 'store'])->name('user.store');
 
+Route::get('/register', [UserController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [UserController::class, 'store'])->name('register.store');
+
 Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
 Route::post('/edit/{id}', [UserController::class, 'update'])->name('user.update');
 

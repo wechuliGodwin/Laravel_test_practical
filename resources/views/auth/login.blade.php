@@ -21,6 +21,10 @@
 
                 <button type="submit" class="btn btn-success w-100">Login</button>
             </form>
+
+            <div class="text-center mt-3">
+                <small>Don't have an account? <a href="{{ route('register') }}">Register here</a></small>
+            </div>
         </div>
     </div>
 </div>
