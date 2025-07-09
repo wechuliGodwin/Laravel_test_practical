@@ -5,6 +5,12 @@
         margin: 30px;
     }
 
+    h2.page-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
     .top-bar {
         display: flex;
         justify-content: space-between;
@@ -12,7 +18,8 @@
         margin-bottom: 20px;
     }
 
-    .top-bar a, .top-bar button {
+    .top-bar a,
+    .top-bar button {
         background-color: #007bff;
         color: white;
         padding: 8px 16px;
@@ -32,10 +39,11 @@
         width: 100%;
         border-collapse: collapse;
         background-color: white;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
 
-    th, td {
+    th,
+    td {
         padding: 12px 16px;
         border-bottom: 1px solid #ddd;
         text-align: left;
@@ -46,7 +54,8 @@
         color: white;
     }
 
-    td a, td form button {
+    td a,
+    td form button {
         margin-right: 8px;
         padding: 4px 10px;
         border: none;
@@ -78,6 +87,8 @@
         background-color: #c82333;
     }
 </style>
+
+<h2 class="page-title">User Management System</h2>
 
 <div class="top-bar">
     <a href="{{ route('user.create') }}">➕ Add New User</a>
