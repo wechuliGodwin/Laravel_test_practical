@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SmsController;
 
 Route::get('/', [UserController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [UserController::class, 'login'])->name('login.submit');
@@ -19,3 +20,6 @@ Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
 Route::post('/edit/{id}', [UserController::class, 'update'])->name('user.update');
 
 Route::delete('/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
+
+// Route::any('sms', [SmsController::class, 'sms.send']);
+Route::match(['get', 'post'], '/sms', [SmsController::class, 'send'])->name('sms.send');
